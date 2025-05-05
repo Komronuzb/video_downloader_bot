@@ -3,7 +3,7 @@ import yt_dlp
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 
-BOT_TOKEN = "7565907079:AAGbkPdIQcxL0GSiY7EsJeJ6XylaXvkTbIk"  # Bot token
+BOT_TOKEN = os.getenv("BOT_TOKEN")"  
 
 async def download_video(url: str, format_id="best") -> str:
     ydl_opts = {
